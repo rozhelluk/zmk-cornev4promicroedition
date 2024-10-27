@@ -27,7 +27,7 @@
 
         bt {
             bindings = <&sl 4>;
-            key-positions = <36 37 38>;
+            key-positions = <37 16 17>;
             layers = <0>;
         };
     };
