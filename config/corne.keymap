@@ -26,7 +26,7 @@
         };
 
         bt {
-            bindings = <&tog 4>;
+            bindings = <&sl 4>;
             key-positions = <36 37 38>;
             layers = <0>;
         };
