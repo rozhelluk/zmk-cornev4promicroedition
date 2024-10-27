@@ -12,9 +12,15 @@
     combos {
         compatible = "zmk,combos";
 
-        esc {
-            bindings = <&kp ESCAPE>;
+        enter {
+            bindings = <&kp ENTER>;
             key-positions = <19 20>;
+            layers = <0>;
+        };
+
+        l3 {
+            bindings = <&mo 3>;
+            key-positions = <37 40>;
             layers = <0>;
         };
     };
@@ -30,10 +36,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T                 &kp Y                 &kp U  &kp I         &kp O    &kp P     &kp ESCAPE
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G                 &kp H                 &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B                 &kp N                 &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ENTER
-                         &kp LGUI  &mo 2  &mt LEFT_ALT SPACE    &mt DELETE BACKSPACE  &mo 1  &kp LEFT_ALT
+&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y     &kp U  &kp I      &kp O    &kp P     &kp LBKT
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H     &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT
+                         &kp LGUI  &mo 1  &kp SPACE    &kp BSPC  &mo 2  &kp LALT
             >;
 
             label = "QWERTY";
@@ -47,10 +53,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1  &kp N2  &kp N3    &kp N4  &kp N5       &kp N6         &kp N7    &kp N8    &kp N9     &kp N0  &kp ESCAPE
-&trans     &trans  &trans  &trans    &trans  &trans       &kp LEFT       &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT  &trans  &trans  &trans    &trans  &trans       &trans         &trans    &trans    &trans     &trans  &kp ENTER
-                           &kp LGUI  &mo 3   &kp SPACE    &kp BACKSPACE  &trans    &kp RALT
+&kp ESCAPE  &kp N1  &kp N2  &kp N3    &kp N4  &kp N5       &kp N6         &kp N7    &kp N8    &kp N9     &kp N0  &trans
+&trans      &trans  &trans  &trans    &trans  &trans       &kp LEFT       &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
+&trans      &trans  &trans  &trans    &trans  &trans       &trans         &trans    &trans    &trans     &trans  &trans
+                            &kp LGUI  &trans  &kp SPACE    &kp BACKSPACE  &trans    &kp RALT
             >;
 
             label = "NUMBERS";
@@ -64,10 +70,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp EXCL      &kp AT          &kp HASH      &kp DLLR      &kp PRCNT       &kp CARET      &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp ESCAPE
-&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp MINUS      &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp TILDE
-&kp LSHFT  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &kp UNDER      &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp ENTER
-                                         &kp LGUI      &trans        &kp SPACE       &kp BACKSPACE  &trans     &kp RALT
+&kp GRAVE       &kp EXCL       &kp AT         &kp HASH       &kp DLLR       &kp PRCNT        &kp CARET      &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
+&bt BT_CLR      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &kp MINUS      &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &trans
+&bt BT_CLR_ALL  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &kp UNDER      &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &trans
+                                              &kp LGUI       &trans         &kp SPACE        &kp BACKSPACE  &trans     &kp RALT
             >;
 
             label = "SYMBOLS";
