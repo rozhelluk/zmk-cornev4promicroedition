@@ -32,6 +32,18 @@
         };
     };
 
+    behaviors {
+        hm: hm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow_mods";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -43,10 +55,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y     &kp U  &kp I      &kp O    &kp P     &kp LBKT
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H     &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RBKT
-                         &kp LGUI  &mo 2  &kp SPACE    &kp BSPC  &mo 1  &kp LALT
+&kp TAB    &kp Q           &kp W           &kp E             &kp R        &kp T        &kp Y     &kp U        &kp I         &kp O            &kp P                    &kp LBKT
+&kp LCTRL  &hm LEFT_WIN A  &hm LEFT_ALT S  &hm LEFT_SHIFT D  &hm LCTRL F  &kp G        &kp H     &hm RCTRL J  &hm RSHIFT K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z           &kp X           &kp C             &kp V        &kp B        &kp N     &kp M        &kp COMMA     &kp DOT          &kp FSLH                 &kp RBKT
+                                           &kp LGUI          &mo 2        &kp SPACE    &kp BSPC  &mo 1        &kp LALT
             >;
 
             label = "QWERTY";
